@@ -1,0 +1,30 @@
+﻿<table *ngIf="employees" class="table table-bordered ">
+    <tr>
+        <td>Code</td>
+        <td>{{employees.code}}</td>
+    </tr>
+    <tr>
+        <td>Name</td>
+        <td>{{employees.name}}</td>
+    </tr>
+    <tr *ngIf="showDetails">
+        <td>Gender</td>
+        <td>{{employees.gender}} </td>
+    </tr>
+    <tr  *ngIf="showDetails">
+        <td>Salary</td>
+        <td>{{employees.annualSalary}}</td>
+    </tr>
+    <tr *ngIf="showDetails">
+        <td>DateOfBirth</td>
+        <td>{{employees.dateOfBirth}}</td>
+    </tr>
+</table>
+<div *ngIf="!employees">
+    {{statusMessage}}
+</div>
+<br/>
+<button (click)="toggleDetails()"> {{showDetails?'Hide':'Show'}} Details</button>
+<div style="margin:auto">
+    <button type="button" class="btn btn-primary" (click)="onBackButtonClick()">BackToList</button>
+</div>

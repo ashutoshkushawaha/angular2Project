@@ -1,0 +1,378 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{655EAEDD-9796-4553-956B-21A31FB2DC83}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AngularDemoFinal</RootNamespace>
+    <AssemblyName>AngularDemoFinal</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TypeScriptToolsVersion>2.1</TypeScriptToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.AI.Agent.Intercept, Version=2.0.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.2.0.6\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.2.0\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.2.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.2.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.2.0\lib\net45\Microsoft.AI.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.2.0\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.2.0\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="node_modules\bootstrap\dist\css\bootstrap-theme.css" />
+    <Content Include="node_modules\bootstrap\dist\css\bootstrap-theme.min.css" />
+    <Content Include="node_modules\bootstrap\dist\css\bootstrap.css" />
+    <Content Include="node_modules\bootstrap\dist\css\bootstrap.min.css" />
+    <Content Include="node_modules\bootstrap\dist\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="node_modules\bootstrap\dist\js\bootstrap.js" />
+    <Content Include="node_modules\bootstrap\dist\js\bootstrap.min.js" />
+    <Content Include="node_modules\bootstrap\dist\js\npm.js" />
+    <Content Include="node_modules\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="node_modules\bootstrap\Gruntfile.js" />
+    <Content Include="node_modules\bootstrap\grunt\bs-commonjs-generator.js" />
+    <Content Include="node_modules\bootstrap\grunt\bs-glyphicons-data-generator.js" />
+    <Content Include="node_modules\bootstrap\grunt\bs-lessdoc-parser.js" />
+    <Content Include="node_modules\bootstrap\grunt\bs-raw-files-generator.js" />
+    <Content Include="node_modules\bootstrap\grunt\change-version.js" />
+    <Content Include="node_modules\bootstrap\js\affix.js" />
+    <Content Include="node_modules\bootstrap\js\alert.js" />
+    <Content Include="node_modules\bootstrap\js\button.js" />
+    <Content Include="node_modules\bootstrap\js\carousel.js" />
+    <Content Include="node_modules\bootstrap\js\collapse.js" />
+    <Content Include="node_modules\bootstrap\js\dropdown.js" />
+    <Content Include="node_modules\bootstrap\js\modal.js" />
+    <Content Include="node_modules\bootstrap\js\popover.js" />
+    <Content Include="node_modules\bootstrap\js\scrollspy.js" />
+    <Content Include="node_modules\bootstrap\js\tab.js" />
+    <Content Include="node_modules\bootstrap\js\tooltip.js" />
+    <Content Include="node_modules\bootstrap\js\transition.js" />
+    <Content Include="node_modules\ng2-bs3-modal\bundles\ng2-bs3-modal.js" />
+    <Content Include="node_modules\ng2-bs3-modal\bundles\ng2-bs3-modal.min.js" />
+    <Content Include="node_modules\ng2-bs3-modal\components\modal-body.js" />
+    <Content Include="node_modules\ng2-bs3-modal\components\modal-footer.js" />
+    <Content Include="node_modules\ng2-bs3-modal\components\modal-header.js" />
+    <Content Include="node_modules\ng2-bs3-modal\components\modal-instance.js" />
+    <Content Include="node_modules\ng2-bs3-modal\components\modal.js" />
+    <Content Include="node_modules\ng2-bs3-modal\directives\autofocus.js" />
+    <Content Include="node_modules\ng2-bs3-modal\karma-test-shim.js" />
+    <Content Include="node_modules\ng2-bs3-modal\karma.conf.js" />
+    <Content Include="node_modules\ng2-bs3-modal\ng2-bs3-modal.js" />
+    <Content Include="node_modules\ng2-bs3-modal\systemjs.config.js" />
+    <Content Include="src\packages.config" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="bs-config.json" />
+    <Content Include="src\app\employee\employeeCount.component.css" />
+    <Content Include="src\app\employee\employeeCount.component.html" />
+    <Content Include="src\app\employee\employeeList.component.css" />
+    <Content Include="src\app\employee\employeeList.component.html" />
+    <Content Include="src\app\employee\userList.component.html" />
+    <Content Include="src\app\main\demo.html" />
+    <Content Include="src\app\userDetails\userDetails.component.html" />
+    <Content Include="src\tsconfig.json" />
+    <Content Include="tslint.json" />
+    <Content Include="node_modules\bootstrap\CHANGELOG.md" />
+    <Content Include="node_modules\bootstrap\dist\css\bootstrap-theme.css.map" />
+    <Content Include="node_modules\bootstrap\dist\css\bootstrap-theme.min.css.map" />
+    <Content Include="node_modules\bootstrap\dist\css\bootstrap.css.map" />
+    <Content Include="node_modules\bootstrap\dist\css\bootstrap.min.css.map" />
+    <Content Include="node_modules\bootstrap\dist\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="node_modules\bootstrap\dist\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="node_modules\bootstrap\dist\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="node_modules\bootstrap\dist\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="node_modules\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="node_modules\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="node_modules\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="node_modules\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="node_modules\bootstrap\grunt\.jshintrc" />
+    <Content Include="node_modules\bootstrap\grunt\configBridge.json" />
+    <Content Include="node_modules\bootstrap\grunt\npm-shrinkwrap.json" />
+    <Content Include="node_modules\bootstrap\grunt\sauce_browsers.yml" />
+    <Content Include="node_modules\bootstrap\less\alerts.less" />
+    <Content Include="node_modules\bootstrap\less\badges.less" />
+    <Content Include="node_modules\bootstrap\less\bootstrap.less" />
+    <Content Include="node_modules\bootstrap\less\breadcrumbs.less" />
+    <Content Include="node_modules\bootstrap\less\button-groups.less" />
+    <Content Include="node_modules\bootstrap\less\buttons.less" />
+    <Content Include="node_modules\bootstrap\less\carousel.less" />
+    <Content Include="node_modules\bootstrap\less\close.less" />
+    <Content Include="node_modules\bootstrap\less\code.less" />
+    <Content Include="node_modules\bootstrap\less\component-animations.less" />
+    <Content Include="node_modules\bootstrap\less\dropdowns.less" />
+    <Content Include="node_modules\bootstrap\less\forms.less" />
+    <Content Include="node_modules\bootstrap\less\glyphicons.less" />
+    <Content Include="node_modules\bootstrap\less\grid.less" />
+    <Content Include="node_modules\bootstrap\less\input-groups.less" />
+    <Content Include="node_modules\bootstrap\less\jumbotron.less" />
+    <Content Include="node_modules\bootstrap\less\labels.less" />
+    <Content Include="node_modules\bootstrap\less\list-group.less" />
+    <Content Include="node_modules\bootstrap\less\media.less" />
+    <Content Include="node_modules\bootstrap\less\mixins.less" />
+    <Content Include="node_modules\bootstrap\less\mixins\alerts.less" />
+    <Content Include="node_modules\bootstrap\less\mixins\background-variant.less" />
+    <Content Include="node_modules\bootstrap\less\mixins\border-radius.less" />
+    <Content Include="node_modules\bootstrap\less\mixins\buttons.less" />
+    <Content Include="node_modules\bootstrap\less\mixins\center-block.less" />
+    <Content Include="node_modules\bootstrap\less\mixins\clearfix.less" />
+    <Content Include="node_modules\bootstrap\less\mixins\forms.less" />
+    <Content Include="node_modules\bootstrap\less\mixins\gradients.less" />
+    <Content Include="node_modules\bootstrap\less\mixins\grid-framework.less" />
+    <Content Include="node_modules\bootstrap\less\mixins\grid.less" />
+    <Content Include="node_modules\bootstrap\less\mixins\hide-text.less" />
+    <Content Include="node_modules\bootstrap\less\mixins\image.less" />
+    <Content Include="node_modules\bootstrap\less\mixins\labels.less" />
+    <Content Include="node_modules\bootstrap\less\mixins\list-group.less" />
+    <Content Include="node_modules\bootstrap\less\mixins\nav-divider.less" />
+    <Content Include="node_modules\bootstrap\less\mixins\nav-vertical-align.less" />
+    <Content Include="node_modules\bootstrap\less\mixins\opacity.less" />
+    <Content Include="node_modules\bootstrap\less\mixins\pagination.less" />
+    <Content Include="node_modules\bootstrap\less\mixins\panels.less" />
+    <Content Include="node_modules\bootstrap\less\mixins\progress-bar.less" />
+    <Content Include="node_modules\bootstrap\less\mixins\reset-filter.less" />
+    <Content Include="node_modules\bootstrap\less\mixins\reset-text.less" />
+    <Content Include="node_modules\bootstrap\less\mixins\resize.less" />
+    <Content Include="node_modules\bootstrap\less\mixins\responsive-visibility.less" />
+    <Content Include="node_modules\bootstrap\less\mixins\size.less" />
+    <Content Include="node_modules\bootstrap\less\mixins\tab-focus.less" />
+    <Content Include="node_modules\bootstrap\less\mixins\table-row.less" />
+    <Content Include="node_modules\bootstrap\less\mixins\text-emphasis.less" />
+    <Content Include="node_modules\bootstrap\less\mixins\text-overflow.less" />
+    <Content Include="node_modules\bootstrap\less\mixins\vendor-prefixes.less" />
+    <Content Include="node_modules\bootstrap\less\modals.less" />
+    <Content Include="node_modules\bootstrap\less\navbar.less" />
+    <Content Include="node_modules\bootstrap\less\navs.less" />
+    <Content Include="node_modules\bootstrap\less\normalize.less" />
+    <Content Include="node_modules\bootstrap\less\pager.less" />
+    <Content Include="node_modules\bootstrap\less\pagination.less" />
+    <Content Include="node_modules\bootstrap\less\panels.less" />
+    <Content Include="node_modules\bootstrap\less\popovers.less" />
+    <Content Include="node_modules\bootstrap\less\print.less" />
+    <Content Include="node_modules\bootstrap\less\progress-bars.less" />
+    <Content Include="node_modules\bootstrap\less\responsive-embed.less" />
+    <Content Include="node_modules\bootstrap\less\responsive-utilities.less" />
+    <Content Include="node_modules\bootstrap\less\scaffolding.less" />
+    <Content Include="node_modules\bootstrap\less\tables.less" />
+    <Content Include="node_modules\bootstrap\less\theme.less" />
+    <Content Include="node_modules\bootstrap\less\thumbnails.less" />
+    <Content Include="node_modules\bootstrap\less\tooltip.less" />
+    <Content Include="node_modules\bootstrap\less\type.less" />
+    <Content Include="node_modules\bootstrap\less\utilities.less" />
+    <Content Include="node_modules\bootstrap\less\variables.less" />
+    <Content Include="node_modules\bootstrap\less\wells.less" />
+    <Content Include="node_modules\bootstrap\LICENSE" />
+    <Content Include="node_modules\bootstrap\package.json" />
+    <Content Include="node_modules\bootstrap\README.md" />
+    <Content Include="node_modules\ng2-bs3-modal\.npmignore" />
+    <Content Include="node_modules\ng2-bs3-modal\.travis.yml" />
+    <Content Include="node_modules\ng2-bs3-modal\components\modal-body.metadata.json" />
+    <Content Include="node_modules\ng2-bs3-modal\components\modal-footer.metadata.json" />
+    <Content Include="node_modules\ng2-bs3-modal\components\modal-header.metadata.json" />
+    <Content Include="node_modules\ng2-bs3-modal\components\modal-instance.metadata.json" />
+    <Content Include="node_modules\ng2-bs3-modal\components\modal.metadata.json" />
+    <Content Include="node_modules\ng2-bs3-modal\directives\autofocus.metadata.json" />
+    <Content Include="node_modules\ng2-bs3-modal\LICENSE.md" />
+    <Content Include="node_modules\ng2-bs3-modal\ng2-bs3-modal.metadata.json" />
+    <Content Include="node_modules\ng2-bs3-modal\package.json" />
+    <Content Include="node_modules\ng2-bs3-modal\README.md" />
+    <Content Include="node_modules\ng2-bs3-modal\tsconfig.bundle.json" />
+    <Content Include="node_modules\ng2-bs3-modal\typings.json" />
+    <Content Include="node_modules\ng2-bs3-modal\typings\globals\core-js\typings.json" />
+    <Content Include="node_modules\ng2-bs3-modal\typings\globals\jasmine-jquery-matchers\typings.json" />
+    <Content Include="node_modules\ng2-bs3-modal\typings\globals\jasmine\typings.json" />
+    <Content Include="node_modules\ng2-bs3-modal\typings\globals\node\typings.json" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="package.json" />
+    <Content Include="src\app\employee\employee.component.html" />
+    <Content Include="src\favicon.ico" />
+    <Content Include="src\index.html" />
+    <Content Include="src\styles.css" />
+    <Content Include="src\systemjs-angular-loader.js" />
+    <Content Include="src\systemjs.config.extras.js" />
+    <Content Include="src\systemjs.config.js" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="node_modules\ng2-bs3-modal\components\modal-body.d.ts" />
+    <TypeScriptCompile Include="node_modules\ng2-bs3-modal\components\modal-footer.d.ts" />
+    <TypeScriptCompile Include="node_modules\ng2-bs3-modal\components\modal-header.d.ts" />
+    <TypeScriptCompile Include="node_modules\ng2-bs3-modal\components\modal-instance.d.ts" />
+    <TypeScriptCompile Include="node_modules\ng2-bs3-modal\components\modal.d.ts" />
+    <TypeScriptCompile Include="node_modules\ng2-bs3-modal\directives\autofocus.d.ts" />
+    <TypeScriptCompile Include="node_modules\ng2-bs3-modal\ng2-bs3-modal.d.ts" />
+    <TypeScriptCompile Include="node_modules\ng2-bs3-modal\src\ng2-bs3-modal\components\modal-body.ngfactory.ts" />
+    <TypeScriptCompile Include="node_modules\ng2-bs3-modal\src\ng2-bs3-modal\components\modal-body.ts" />
+    <TypeScriptCompile Include="node_modules\ng2-bs3-modal\src\ng2-bs3-modal\components\modal-footer.ngfactory.ts" />
+    <TypeScriptCompile Include="node_modules\ng2-bs3-modal\src\ng2-bs3-modal\components\modal-footer.ts" />
+    <TypeScriptCompile Include="node_modules\ng2-bs3-modal\src\ng2-bs3-modal\components\modal-header.ngfactory.ts" />
+    <TypeScriptCompile Include="node_modules\ng2-bs3-modal\src\ng2-bs3-modal\components\modal-header.ts" />
+    <TypeScriptCompile Include="node_modules\ng2-bs3-modal\src\ng2-bs3-modal\components\modal-instance.ts" />
+    <TypeScriptCompile Include="node_modules\ng2-bs3-modal\src\ng2-bs3-modal\components\modal.ngfactory.ts" />
+    <TypeScriptCompile Include="node_modules\ng2-bs3-modal\src\ng2-bs3-modal\components\modal.ts" />
+    <TypeScriptCompile Include="node_modules\ng2-bs3-modal\src\ng2-bs3-modal\directives\autofocus.spec.ts" />
+    <TypeScriptCompile Include="node_modules\ng2-bs3-modal\src\ng2-bs3-modal\directives\autofocus.ts" />
+    <TypeScriptCompile Include="node_modules\ng2-bs3-modal\src\ng2-bs3-modal\ng2-bs3-modal.ngfactory.ts" />
+    <TypeScriptCompile Include="node_modules\ng2-bs3-modal\src\ng2-bs3-modal\ng2-bs3-modal.spec.ts" />
+    <TypeScriptCompile Include="node_modules\ng2-bs3-modal\src\ng2-bs3-modal\ng2-bs3-modal.ts" />
+    <TypeScriptCompile Include="node_modules\ng2-bs3-modal\typings\custom\jasmine-jquery-matchers.d.ts" />
+    <TypeScriptCompile Include="node_modules\ng2-bs3-modal\typings\globals\core-js\index.d.ts" />
+    <TypeScriptCompile Include="node_modules\ng2-bs3-modal\typings\globals\jasmine-jquery-matchers\index.d.ts" />
+    <TypeScriptCompile Include="node_modules\ng2-bs3-modal\typings\globals\jasmine\index.d.ts" />
+    <TypeScriptCompile Include="node_modules\ng2-bs3-modal\typings\globals\node\index.d.ts" />
+    <TypeScriptCompile Include="node_modules\ng2-bs3-modal\typings\index.d.ts" />
+    <TypeScriptCompile Include="src\app\app-routing.module.ts" />
+    <TypeScriptCompile Include="src\app\app.component.spec.ts" />
+    <TypeScriptCompile Include="src\app\app.component.ts" />
+    <TypeScriptCompile Include="src\app\app.module.ts" />
+    <TypeScriptCompile Include="src\app\employee\employee.component.ts" />
+    <TypeScriptCompile Include="src\app\employee\employee.service.ts" />
+    <TypeScriptCompile Include="src\app\employee\employee.ts" />
+    <TypeScriptCompile Include="src\app\employee\employeeCount.Component.ts" />
+    <TypeScriptCompile Include="src\app\employee\employeeList.component.ts" />
+    <TypeScriptCompile Include="src\app\employee\employeTitle.pipe.ts" />
+    <TypeScriptCompile Include="src\app\employee\UserDetail.ts" />
+    <TypeScriptCompile Include="src\app\employee\userList.component.ts" />
+    <TypeScriptCompile Include="src\app\main\home.component.ts" />
+    <TypeScriptCompile Include="src\app\main\pageNotFound.component.ts" />
+    <TypeScriptCompile Include="src\app\Others\inputCheck.component.ts" />
+    <TypeScriptCompile Include="src\app\Others\simple.component.ts" />
+    <TypeScriptCompile Include="src\app\service\user.service.ts" />
+    <TypeScriptCompile Include="src\app\student\student.component.ts" />
+    <TypeScriptCompile Include="src\app\userDetails\userDetails.component.ts" />
+    <TypeScriptCompile Include="src\app\user\enum.ts" />
+    <TypeScriptCompile Include="src\app\user\global.ts" />
+    <TypeScriptCompile Include="src\app\user\user.ts" />
+    <TypeScriptCompile Include="src\main.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>5256</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:5256/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

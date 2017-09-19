@@ -1,0 +1,39 @@
+﻿<table class="table table-striped">
+    <thead>
+        <tr>
+            <td>
+                S.No
+            </td>
+            <td>
+                UserId
+            </td>
+            <td>
+                Id
+            </td>
+            <td>
+                Title
+            </td>
+            <td>
+                Body
+            </td>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+
+            <td>1</td>
+            <td>{{userList.userId}}</td>
+            <td>{{userList.id}}</td>
+            <td>{{userList.title | lowercase}}</td>
+            <td>{{userList.body}}</td>
+
+
+
+        </tr>
+        
+        <tr *ngIf="!userList || userList.length==0">
+            <td colspan="4"> {{statusMessage}}</td>
+        </tr>
+    </tbody>
+</table>

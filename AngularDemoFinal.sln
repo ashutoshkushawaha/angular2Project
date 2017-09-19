@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AngularDemoFinal", "AngularDemoFinal\AngularDemoFinal.csproj", "{655EAEDD-9796-4553-956B-21A31FB2DC83}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApiService", "WebApiService\WebApiService.csproj", "{E7156B29-02D6-4FE0-AB0F-3FC340EE7148}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{655EAEDD-9796-4553-956B-21A31FB2DC83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{655EAEDD-9796-4553-956B-21A31FB2DC83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{655EAEDD-9796-4553-956B-21A31FB2DC83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{655EAEDD-9796-4553-956B-21A31FB2DC83}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E7156B29-02D6-4FE0-AB0F-3FC340EE7148}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E7156B29-02D6-4FE0-AB0F-3FC340EE7148}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E7156B29-02D6-4FE0-AB0F-3FC340EE7148}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E7156B29-02D6-4FE0-AB0F-3FC340EE7148}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

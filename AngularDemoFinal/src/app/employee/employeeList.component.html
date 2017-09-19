@@ -1,0 +1,52 @@
+﻿<employee-count *ngIf="employees" [all]="getTotalEmployeeCount()"
+                [male]="getTotalMaleEmployeeCount()"
+                [female]="getTotalFeMaleEmployeeCount()" (countRadioButtonSelecteionChanged)="onEmployeeCountRadioButtonChange($event)"></employee-count>
+<br />
+<br/>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <td>
+                S.No.
+            </td>
+            <td>
+                Code
+            </td>
+            <td>
+                Name
+            </td>
+            
+            <td>
+                salary
+            </td>
+            <td>
+                Gender
+            </td>
+            <td>
+                dob
+            </td>
+            
+        </tr>
+    </thead>
+    <tbody>
+        <ng-container *ngFor="let employee of employees; let i=index; "  >
+            <tr *ngIf="selectedEmployeeCountRadioButton=='All' || selectedEmployeeCountRadioButton==employee.gender">
+
+                <!--  <tr *ngFor ="let employee of employees;trackBy:trackByEmpCode;let i=index;let isFirst=first;let isLast = last;let isEven=even;let isOdd=odd;">-->
+                <td>{{i}}</td>
+                <td><a [routerLink]="['/employeeListComponent',employee.code]">{{employee.code}}</a></td>
+                <td>{{employee.name |employeeTitle:employee.gender}}</td>
+                <td>{{employee.annualSalary}}</td>
+                <td>{{employee.gender}}</td>
+                <td>{{employee.dateOfBirth}}</td>
+
+
+
+            </tr>
+        </ng-container>
+        <tr *ngIf ="!employees || employees.length==0">
+            <td colspan="4"> No data found!</td>
+        </tr>
+    </tbody>
+</table>
+<button (click)="getEmployees()">Refres Employee</button>
